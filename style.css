@@ -1,0 +1,140 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    background-image: url(static/IMG/BGDC.jpeg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+    background-position-x: center;
+}
+
+.navbar{
+    background-color: #6DFFB6;
+    height: 50px;
+
+}
+
+.img{
+    padding-left: 2%;
+    position: absolute;
+
+}
+
+.sambutan{
+    margin-top: 0;
+    align-items: center;
+    justify-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    text-shadow: 
+    1px 1px 0px black,   /* Top-left shadow */
+    -1px 1px 0px black,  /* Top-right shadow */
+    -1px -1px 0px black, /* Bottom-right shadow */
+    1px -1px 0px black;  /* Bottom-left shadow */
+}
+
+.sambutan2{
+    margin-top: 0px;
+    padding-top: 0;
+    align-items: center;
+    justify-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: 50px;
+    color: white;
+    text-shadow: 
+    1px 1px 0px black,   /* Top-left shadow */
+    -1px 1px 0px black,  /* Top-right shadow */
+    -1px -1px 0px black, /* Bottom-right shadow */
+    1px -1px 0px black;  /* Bottom-left shadow */
+}
+
+.button{
+    background-color: #6DFFB6;
+    margin-left: 45%;
+    width: 200px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.button p{
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    text-shadow: 20px;
+}
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result img{
+  width: 300px
+}
+
+.error {
+    color: red;
+}
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Dog and Cat Breed Image Classification</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="img">
+            <img src="static/IMG/Logo-CLi.png" alt="Logo" width="50px" height="50px">
+        </div>
+    </div>
+    <div class="bungkus">
+        <div class="sambutan">
+            <p>Image Classification</p>
+        </div>
+        <div class="sambutan2">
+            <p>Can You Tell Me What Animal am I?</p>
+        </div>
+    </div>
+
+    <button id="popupBtn" class="button">Pick Image</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="uploadForm" action="/predict" enctype="multipart/form-data" method="post">
+                <input type="file" name="file" id="file" accept="image/*" required>
+                <button type="submit" class="button">Upload</button>
+            </form>
+           
+        </div>
+    </div>
+
+    <div class="result">
+                {% if response %}
+                    <p>It's a {{ response.category }}</p>
+                    <p>Predicted Breed: {{ response.class_name }}</p>
+                    <p>Confidence Percentage: {{ response.confidence }}</p>
+                    <img src="{{ response.image_url }}" alt="Uploaded Image">
+                {% elif error %}
+                    <p class="error">{{ error }}</p>
+                {% endif %}
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("popupBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
